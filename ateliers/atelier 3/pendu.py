@@ -110,8 +110,15 @@ def runGame():
 def build_list(file):
     f = open(file,"r")
     c = f.readlines()
+    a = []
 
-    return c
+    for i in c:
+        a.append(i.strip())
+    
+    print(a)
+    return a
+
+
 
 
 def build_dict(file):
