@@ -114,8 +114,6 @@ def build_list(file):
 
     for i in c:
         a.append(i.strip())
-    
-    print(a)
     return a
 
 
@@ -153,7 +151,6 @@ def difficulte(file):
 
 
 
-runGame()
 
 
 

@@ -54,7 +54,6 @@ def dictionnaire(fichier):
     return lst
 
 
-print(dictionnaire("ateliers/atelier 3/test.txt"))
 
 
 
