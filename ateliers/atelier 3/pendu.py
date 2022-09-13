@@ -152,6 +152,7 @@ def difficulte(file):
 
 
 
+runGame()
 
 
 

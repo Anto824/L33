@@ -31,8 +31,7 @@ def creation():
 
         nnn=str(input("ce labyrinthe vous convient-il ?"))
         if nnn.lower()!="non":
-            nnn = str(input("etes-vous sur ? un labyrinthe infaisable fera une boucle infinie (le chemin ne peut pas passer par une diagonale)."))
-    return T
+            return T
 
 def createMaze():
     T = creation()
