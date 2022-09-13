@@ -43,7 +43,7 @@ lstp = [[],[0],[0,1,4],[0,1,2],[1,3]]
 
 def runGame():
     #lstmot = ['bonjour','toto','titi','elephant','cheval','chat']
-    mot = random.choice(build_list('ateliers/atelier 3/capitales.txt'))
+    mot = random.choice(difficulte('ateliers/atelier 3/capitales.txt'))
     print(outputStr(mot,[]))
     lst = []
     jouer = True
@@ -108,16 +108,13 @@ def runGame():
 
 
 def build_list(file):
-    lst = []
     f = open(file,"r")
-    c = f.readline()
-    while c!="":
-        lst.append(c)
-        c = f.readline()
-    return lst
+    c = f.readlines()
+
+    return c
 
 
-def build_dict(difficulté, file):
+def build_dict(file):
     f = build_list(file)
     a = []
     b = []
@@ -134,10 +131,22 @@ def build_dict(difficulté, file):
         'normal' : b,
         'difficile' : c
     }
-    print(dico)
+    #print(dico)
+    return dico
+
+def difficulte(file):
+    diff = input('quelle difficulté choisissez-vous ? easy, normal, difficile: ')
+    dict = build_dict(file)
+    if diff == 'easy':
+        return dict['facile']
+    elif diff == 'normal':
+        return dict['normal']
+    else:
+        return dict['difficile']
 
 
-build_dict('easy','ateliers/atelier 3/capitales.txt')
+
+runGame()
 
 
 
