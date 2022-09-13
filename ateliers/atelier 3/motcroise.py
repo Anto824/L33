@@ -1,5 +1,4 @@
 
-from site import PREFIXES
 
 
 def mots_Nlettres(lst_mot,n):
@@ -49,12 +48,13 @@ def dictionnaire(fichier):
     f = open(fichier,"r")
     c = f.readline()
     while c!="":
-        print(c,end="")
+        lst.append(c)
+        #print(c,end="")
         c = f.readline()
     return lst
 
 
-print(dictionnaire("/Users/Anto_cours/Documents/L3/L33/ateliers/atelier 3/test.txt"))
+print(dictionnaire("ateliers/atelier 3/test.txt"))
 
 
 
