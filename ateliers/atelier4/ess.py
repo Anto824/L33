@@ -32,8 +32,10 @@ L = [1,2,3,4,5,6,7,8,9,10]
 def extract_elements_list(list_in_which_to_choose,int_nbr_element_to_extract):
     lst = []
     for i in range(int_nbr_element_to_extract):
-        lst = list_in_which_to_choose.pop(choice(list_in_which_to_choose))
+        lst.append(list_in_which_to_choose.pop(randint(0,len(list_in_which_to_choose)-1)))
+    print(list_in_which_to_choose)
     return lst
 
 
+print(extract_elements_list(L,3))
 
