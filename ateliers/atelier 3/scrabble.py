@@ -15,7 +15,10 @@ def mot_correspondant(mot,motif):
 
 
 def presente(lettre,mot):
-    return mot.index(lettre)
+    if lettre in mot:
+        return mot.index(lettre)
+    else:
+        return False
 
 def mot_possible(mot,lettres):
     for i in mot:
